@@ -1,0 +1,48 @@
+{
+	"user": {
+		"userid": string,
+		"email": string,
+		"firstname": string,
+		"lastname": string,
+		"username": string,
+		"status": "active|inactive|locked",
+		"roles": {
+			string
+		},
+		"password": {
+			"salt": string,
+			"hash": string
+		}
+	},
+	"token": {
+		"token": string,
+		"type": "access|refresh",
+		"clientId": string,
+		"userId": string,
+		"expires": datetime
+	},
+	"employee": {
+		"id": string,
+		"name": string,
+		"title": string,
+		"sequence": int,
+		"active": bool,
+		"rents": [
+			{
+				"id": string,
+				"percentage": decimal,
+				"effective": datetime
+			}
+		],
+		"modified": datetime,
+		"modifiedby": string
+	},
+	"gross": {
+		"employee": string,
+		"rent": string,
+		"amount": decimal,
+		"on": datetime,
+		"modified": datetime,
+		"modifiedby": string		
+	}
+}
