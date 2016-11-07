@@ -1,0 +1,87 @@
+[
+  {
+    "_id": "5691655ddd621b15858e3c56",
+    "id": "b8f43f35-9712-4780-a7a3-7e025043bca8",
+    "name": "Tom",
+    "title": "Owner",
+    "sequence": 1,
+    "active": true,
+    "rents": [
+        {
+            "id": "a03b0b51-13e3-4bc2-976a-e18af7fa8aae",
+            "percentage": 0.83,
+            "effective": ISODate("2000-01-01T00:00:00+00:00")
+        }
+    ],
+    "modified": ISODate("2016-11-06T00:00:00+00:00"),
+    "modifiedby": "admin"
+  },
+  {
+    "_id": "5691655d27cf84167672e85c",
+    "id": "a5de925b-0155-4328-8a2c-aa266dbe32c3",
+    "name": "Ronda",
+    "title": "Manager",
+    "sequence": 2,
+    "active": true,
+    "rents": [
+        {
+            "id": "2386a697-8230-48cb-ae7c-bc54cb4adf62",
+            "percentage": 0.83,
+            "effective": ISODate("2000-01-01T00:00:00+00:00")
+        }
+    ],
+    "modified": ISODate("2016-11-06T00:00:00+00:00"),
+    "modifiedby": "admin"
+  },
+  {
+    "_id": "5691655d0a75def96eae8ae2",
+    "id": "1ab35951-16e7-4f52-b5ad-88300080205d",
+    "name": "Alysha",
+    "title": "Barber",
+    "sequence": 3,
+    "active": true,
+    "rents": [
+        {
+            "id": "efceaa1f-ea53-4386-be36-c58d3141ae11",
+            "percentage": 0.73,
+            "effective": ISODate("2000-01-01T00:00:00+00:00")
+        }
+    ],
+    "modified": ISODate("2016-11-06T00:00:00+00:00"),
+    "modifiedby": "admin"
+  },
+  {
+    "_id": "5691655d6120997413cdaefa",
+    "id": "9db0f7af-32c3-42e4-87d6-62deaaa6e531",
+    "name": "Alva",
+    "title": "Barber",
+    "sequence": 4,
+    "active": true,
+    "rents": [
+        {
+            "id": "c92a91e7-c004-477a-b55a-b48cfca21b29",
+            "percentage": 0.73,
+            "effective": ISODate("2000-01-01T00:00:00+00:00")
+        }
+    ],
+    "modified": ISODate("2016-11-06T00:00:00+00:00"),
+    "modifiedby": "admin"
+  },
+  {
+    "_id": "5691655da377a15460b1e5da",
+    "id": "46128f4d-e213-4cb6-99d8-3b947e6882c2",
+    "name": "Justin",
+    "title": "Barber",
+    "sequence": 5,
+    "active": true,
+    "rents": [
+        {
+            "id": "c62aeac6-1819-4b85-8c7f-7279d94e80db",
+            "percentage": 0.73,
+            "effective": ISODate("2000-01-01T00:00:00+00:00")
+        }
+    ],
+    "modified": ISODate("2016-11-06T00:00:00+00:00"),
+    "modifiedby": "admin"
+  }
+]

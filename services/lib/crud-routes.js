@@ -31,12 +31,12 @@ let crudRoutes = (opts) => {
 
     let routes = [];
 
-    ['post', 'get', 'put', 'del'].forEach((method) => {
+    ['post', 'get', 'put', 'delete'].forEach((method) => {
         let uribase = ((opts.parent && opts.parent.name) ? ('/' + opts.parent.name + '/:' + (opts.parent.idname || opts.parent.name + 'id')) : '') +
             '/' + opts.entity;
 
         let uri = uribase;
-        if (method == 'get' || method == 'put' || method == 'del') {
+        if (method == 'get' || method == 'put' || method == 'delete') {
             uri += '/:id';
         }
 
@@ -46,7 +46,7 @@ let crudRoutes = (opts) => {
             protected: !!opts.protected,
             handler: handler(method, service)
         });
-        if (method == 'get' || method == 'del') {
+        if (method == 'get' || method == 'delete') {
             routes.push({
                 method: method,
                 uri: uribase,
@@ -110,7 +110,7 @@ let handler = (method, service) => {
             });
         };
     }
-    if (method == 'del') {
+    if (method == 'delete') {
         return (req,res,next) => {
             return service.remove(req.params)
             .then((data) => {
@@ -122,7 +122,7 @@ let handler = (method, service) => {
             });
         };
     }
-    if (method == 'delall') {
+    if (method == 'deleteall') {
         return (req,res,next) => {
             return service.removeAll(req.params)
             .then((data) => {

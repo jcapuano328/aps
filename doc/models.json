@@ -38,11 +38,11 @@
 		"modifiedby": string
 	},
 	"gross": {
-		"employee": string,
-		"rent": string,
+		"id": string,		
+		"employeeid": string,		
 		"amount": decimal,
 		"on": datetime,
 		"modified": datetime,
-		"modifiedby": string		
+		"modifiedby": string
 	}
 }

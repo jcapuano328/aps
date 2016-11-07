@@ -1,0 +1,13 @@
+[
+  {
+    'repeat(25)': {
+      _id: '{{objectId()}}',
+      id: '{{guid()}}',
+      employeeid: 'b8f43f35-9712-4780-a7a3-7e025043bca8',
+      amount: '{{floating(100, 500, 2)}}',
+      on: 'ISODate("{{moment(this.date(new Date(2016,11,7))).format()}}")',
+      modified: 'ISODate("{{moment(this.date(new Date())).format()}}")',
+      modifiedby: 'admin'
+    }
+  }
+]
