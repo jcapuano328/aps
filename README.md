@@ -16,6 +16,8 @@ http://gaearon.github.io/react-hot-loader/getstarted/
 
 https://blog.madewithenvy.com/getting-started-with-webpack-2-ed2b86c68783#.yk4p8dj0i
 
+https://webpack.github.io/docs/webpack-dev-server.html
+
 
 ## Overview
 

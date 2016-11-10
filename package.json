@@ -13,7 +13,7 @@
     "test-integration": "node ./node_modules/mocha/bin/mocha --recursive ./tests/integration",
     "debug": "node-debug main.js",
     "debug-test": "node-debug node_modules/mocha/bin/_mocha tests/unit/server-spec.js",
-    "dev": "node ./node_modules/webpack/bin/webpack -d --watch",
+    "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server --content-base web/server/content -d --watch",
     "build-dev": "node ./node_modules/webpack/bin/webpack -d",
     "build": "node ./node_modules/webpack/bin/webpack -p"
   },
