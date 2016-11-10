@@ -116,7 +116,7 @@ describe('CRUD routes', () => {
                 env.route = env.routes[4];
             });
             it('should have a method', () => {
-                expect(env.route).to.have.property('method', 'delete');
+                expect(env.route).to.have.property('method', 'del');
             });
             it('should have a uri', () => {
                 expect(env.route).to.have.property('uri', '/other/:other_id/stuffs/:id');
@@ -133,7 +133,7 @@ describe('CRUD routes', () => {
                 env.route = env.routes[5];
             });
             it('should have a method', () => {
-                expect(env.route).to.have.property('method', 'delete');
+                expect(env.route).to.have.property('method', 'del');
             });
             it('should have a uri', () => {
                 expect(env.route).to.have.property('uri', '/other/:other_id/stuffs');

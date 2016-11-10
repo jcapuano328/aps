@@ -10,7 +10,7 @@ describe('Router', () => {
 	var env = {};
 	beforeEach(() => {
 		env = {};
-		env.log = sinon.stub().returns(sandbox.require('../../mocks/log')());
+		env.log = sandbox.require('../../mocks/log')();
 
 		env.config = {
 			paths: {
