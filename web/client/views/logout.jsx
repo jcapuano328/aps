@@ -1,9 +1,9 @@
 import React from 'react';
-import { History } from 'react-router'
+import { browserHistory } from 'react-router'
 import Auth from '../services/auth'
 
 let Logout = React.createClass({
-    mixins: [ History ],
+    mixins: [ browserHistory ],
 
     componentDidMount() {
         Auth.logout()

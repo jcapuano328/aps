@@ -4,6 +4,9 @@ import { browserHistory, IndexRoute, Router, Route } from 'react-router'
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import {IntlProvider, addLocaleData} from 'react-intl';
 
+require("font-awesome-webpack");
+require("./css/index.css");
+
 injectTapEventPlugin();
 
 import App from './components/app';

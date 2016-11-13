@@ -1,0 +1,1368 @@
+[
+	{
+		"_id" : "582073ca0e74382e4431c33d",
+		"id" : "e7e41790-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "b8f43f35-9712-4780-a7a3-7e025043bca8",
+			"name" : "Tom",
+			"title" : "Owner",
+			"rent" : 0.83
+		},
+		"amount" : 761.14,
+		"on" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c33e",
+		"id" : "e7e465b0-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "b8f43f35-9712-4780-a7a3-7e025043bca8",
+			"name" : "Tom",
+			"title" : "Owner",
+			"rent" : 0.83
+		},
+		"amount" : 660.91,
+		"on" : "ISODate(2016-11-08T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c33f",
+		"id" : "e7e48cc0-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "b8f43f35-9712-4780-a7a3-7e025043bca8",
+			"name" : "Tom",
+			"title" : "Owner",
+			"rent" : 0.83
+		},
+		"amount" : 676.51,
+		"on" : "ISODate(2016-11-09T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c340",
+		"id" : "e7e48cc1-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "b8f43f35-9712-4780-a7a3-7e025043bca8",
+			"name" : "Tom",
+			"title" : "Owner",
+			"rent" : 0.83
+		},
+		"amount" : 997.73,
+		"on" : "ISODate(2016-11-10T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c341",
+		"id" : "e7e48cc2-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "b8f43f35-9712-4780-a7a3-7e025043bca8",
+			"name" : "Tom",
+			"title" : "Owner",
+			"rent" : 0.83
+		},
+		"amount" : 634.34,
+		"on" : "ISODate(2016-11-11T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c342",
+		"id" : "e7e48cc3-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "b8f43f35-9712-4780-a7a3-7e025043bca8",
+			"name" : "Tom",
+			"title" : "Owner",
+			"rent" : 0.83
+		},
+		"amount" : 516.61,
+		"on" : "ISODate(2016-11-12T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c343",
+		"id" : "e7e48cc4-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "b8f43f35-9712-4780-a7a3-7e025043bca8",
+			"name" : "Tom",
+			"title" : "Owner",
+			"rent" : 0.83
+		},
+		"amount" : 742.25,
+		"on" : "ISODate(2016-11-14T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c344",
+		"id" : "e7e48cc5-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "b8f43f35-9712-4780-a7a3-7e025043bca8",
+			"name" : "Tom",
+			"title" : "Owner",
+			"rent" : 0.83
+		},
+		"amount" : 951.12,
+		"on" : "ISODate(2016-11-15T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c345",
+		"id" : "e7e4b3d0-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "b8f43f35-9712-4780-a7a3-7e025043bca8",
+			"name" : "Tom",
+			"title" : "Owner",
+			"rent" : 0.83
+		},
+		"amount" : 136.97,
+		"on" : "ISODate(2016-11-16T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c346",
+		"id" : "e7e4b3d1-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "b8f43f35-9712-4780-a7a3-7e025043bca8",
+			"name" : "Tom",
+			"title" : "Owner",
+			"rent" : 0.83
+		},
+		"amount" : 845.32,
+		"on" : "ISODate(2016-11-17T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c347",
+		"id" : "e7e4b3d2-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "b8f43f35-9712-4780-a7a3-7e025043bca8",
+			"name" : "Tom",
+			"title" : "Owner",
+			"rent" : 0.83
+		},
+		"amount" : 570.84,
+		"on" : "ISODate(2016-11-18T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c348",
+		"id" : "e7e4b3d3-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "b8f43f35-9712-4780-a7a3-7e025043bca8",
+			"name" : "Tom",
+			"title" : "Owner",
+			"rent" : 0.83
+		},
+		"amount" : 498.68,
+		"on" : "ISODate(2016-11-19T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c349",
+		"id" : "e7e4b3d4-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "b8f43f35-9712-4780-a7a3-7e025043bca8",
+			"name" : "Tom",
+			"title" : "Owner",
+			"rent" : 0.83
+		},
+		"amount" : 680.6,
+		"on" : "ISODate(2016-11-21T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c34a",
+		"id" : "e7e4b3d5-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "b8f43f35-9712-4780-a7a3-7e025043bca8",
+			"name" : "Tom",
+			"title" : "Owner",
+			"rent" : 0.83
+		},
+		"amount" : 1007.22,
+		"on" : "ISODate(2016-11-22T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c34b",
+		"id" : "e7e4dae0-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "b8f43f35-9712-4780-a7a3-7e025043bca8",
+			"name" : "Tom",
+			"title" : "Owner",
+			"rent" : 0.83
+		},
+		"amount" : 108.8,
+		"on" : "ISODate(2016-11-23T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c34c",
+		"id" : "e7e4dae1-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "b8f43f35-9712-4780-a7a3-7e025043bca8",
+			"name" : "Tom",
+			"title" : "Owner",
+			"rent" : 0.83
+		},
+		"amount" : 301.22,
+		"on" : "ISODate(2016-11-24T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c34d",
+		"id" : "e7e4dae2-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "b8f43f35-9712-4780-a7a3-7e025043bca8",
+			"name" : "Tom",
+			"title" : "Owner",
+			"rent" : 0.83
+		},
+		"amount" : 204.12,
+		"on" : "ISODate(2016-11-25T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c34e",
+		"id" : "e7e4dae3-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "b8f43f35-9712-4780-a7a3-7e025043bca8",
+			"name" : "Tom",
+			"title" : "Owner",
+			"rent" : 0.83
+		},
+		"amount" : 209.79,
+		"on" : "ISODate(2016-11-26T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c34f",
+		"id" : "e7e501f0-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "b8f43f35-9712-4780-a7a3-7e025043bca8",
+			"name" : "Tom",
+			"title" : "Owner",
+			"rent" : 0.83
+		},
+		"amount" : 985.93,
+		"on" : "ISODate(2016-11-28T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c350",
+		"id" : "e7e52900-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "b8f43f35-9712-4780-a7a3-7e025043bca8",
+			"name" : "Tom",
+			"title" : "Owner",
+			"rent" : 0.83
+		},
+		"amount" : 416.21,
+		"on" : "ISODate(2016-11-29T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c351",
+		"id" : "e7e52901-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "b8f43f35-9712-4780-a7a3-7e025043bca8",
+			"name" : "Tom",
+			"title" : "Owner",
+			"rent" : 0.83
+		},
+		"amount" : 444.36,
+		"on" : "ISODate(2016-11-30T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c352",
+		"id" : "e7e52902-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "a5de925b-0155-4328-8a2c-aa266dbe32c3",
+			"name" : "Ronda",
+			"title" : "Manager",
+			"rent" : 0.83
+		},
+		"amount" : 340.39,
+		"on" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c353",
+		"id" : "e7e52903-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "a5de925b-0155-4328-8a2c-aa266dbe32c3",
+			"name" : "Ronda",
+			"title" : "Manager",
+			"rent" : 0.83
+		},
+		"amount" : 732.14,
+		"on" : "ISODate(2016-11-08T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c354",
+		"id" : "e7e52904-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "a5de925b-0155-4328-8a2c-aa266dbe32c3",
+			"name" : "Ronda",
+			"title" : "Manager",
+			"rent" : 0.83
+		},
+		"amount" : 158.13,
+		"on" : "ISODate(2016-11-09T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c355",
+		"id" : "e7e55010-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "a5de925b-0155-4328-8a2c-aa266dbe32c3",
+			"name" : "Ronda",
+			"title" : "Manager",
+			"rent" : 0.83
+		},
+		"amount" : 830.68,
+		"on" : "ISODate(2016-11-10T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c356",
+		"id" : "e7e55011-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "a5de925b-0155-4328-8a2c-aa266dbe32c3",
+			"name" : "Ronda",
+			"title" : "Manager",
+			"rent" : 0.83
+		},
+		"amount" : 212.2,
+		"on" : "ISODate(2016-11-11T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c357",
+		"id" : "e7e55012-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "a5de925b-0155-4328-8a2c-aa266dbe32c3",
+			"name" : "Ronda",
+			"title" : "Manager",
+			"rent" : 0.83
+		},
+		"amount" : 531.98,
+		"on" : "ISODate(2016-11-12T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c358",
+		"id" : "e7e55013-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "a5de925b-0155-4328-8a2c-aa266dbe32c3",
+			"name" : "Ronda",
+			"title" : "Manager",
+			"rent" : 0.83
+		},
+		"amount" : 604.81,
+		"on" : "ISODate(2016-11-14T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c359",
+		"id" : "e7e55014-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "a5de925b-0155-4328-8a2c-aa266dbe32c3",
+			"name" : "Ronda",
+			"title" : "Manager",
+			"rent" : 0.83
+		},
+		"amount" : 371.29,
+		"on" : "ISODate(2016-11-15T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c35a",
+		"id" : "e7e55015-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "a5de925b-0155-4328-8a2c-aa266dbe32c3",
+			"name" : "Ronda",
+			"title" : "Manager",
+			"rent" : 0.83
+		},
+		"amount" : 1011.26,
+		"on" : "ISODate(2016-11-16T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c35b",
+		"id" : "e7e57720-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "a5de925b-0155-4328-8a2c-aa266dbe32c3",
+			"name" : "Ronda",
+			"title" : "Manager",
+			"rent" : 0.83
+		},
+		"amount" : 238.66,
+		"on" : "ISODate(2016-11-17T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c35c",
+		"id" : "e7e57721-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "a5de925b-0155-4328-8a2c-aa266dbe32c3",
+			"name" : "Ronda",
+			"title" : "Manager",
+			"rent" : 0.83
+		},
+		"amount" : 621.61,
+		"on" : "ISODate(2016-11-18T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c35d",
+		"id" : "e7e57722-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "a5de925b-0155-4328-8a2c-aa266dbe32c3",
+			"name" : "Ronda",
+			"title" : "Manager",
+			"rent" : 0.83
+		},
+		"amount" : 993.86,
+		"on" : "ISODate(2016-11-19T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c35e",
+		"id" : "e7e57723-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "a5de925b-0155-4328-8a2c-aa266dbe32c3",
+			"name" : "Ronda",
+			"title" : "Manager",
+			"rent" : 0.83
+		},
+		"amount" : 681.85,
+		"on" : "ISODate(2016-11-21T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c35f",
+		"id" : "e7e57724-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "a5de925b-0155-4328-8a2c-aa266dbe32c3",
+			"name" : "Ronda",
+			"title" : "Manager",
+			"rent" : 0.83
+		},
+		"amount" : 669.42,
+		"on" : "ISODate(2016-11-22T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c360",
+		"id" : "e7e57725-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "a5de925b-0155-4328-8a2c-aa266dbe32c3",
+			"name" : "Ronda",
+			"title" : "Manager",
+			"rent" : 0.83
+		},
+		"amount" : 397.07,
+		"on" : "ISODate(2016-11-23T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c361",
+		"id" : "e7e59e30-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "a5de925b-0155-4328-8a2c-aa266dbe32c3",
+			"name" : "Ronda",
+			"title" : "Manager",
+			"rent" : 0.83
+		},
+		"amount" : 626.26,
+		"on" : "ISODate(2016-11-24T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c362",
+		"id" : "e7e59e31-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "a5de925b-0155-4328-8a2c-aa266dbe32c3",
+			"name" : "Ronda",
+			"title" : "Manager",
+			"rent" : 0.83
+		},
+		"amount" : 428.2,
+		"on" : "ISODate(2016-11-25T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c363",
+		"id" : "e7e59e32-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "a5de925b-0155-4328-8a2c-aa266dbe32c3",
+			"name" : "Ronda",
+			"title" : "Manager",
+			"rent" : 0.83
+		},
+		"amount" : 966.09,
+		"on" : "ISODate(2016-11-26T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c364",
+		"id" : "e7e59e33-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "a5de925b-0155-4328-8a2c-aa266dbe32c3",
+			"name" : "Ronda",
+			"title" : "Manager",
+			"rent" : 0.83
+		},
+		"amount" : 970.2,
+		"on" : "ISODate(2016-11-28T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c365",
+		"id" : "e7e59e34-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "a5de925b-0155-4328-8a2c-aa266dbe32c3",
+			"name" : "Ronda",
+			"title" : "Manager",
+			"rent" : 0.83
+		},
+		"amount" : 504.67,
+		"on" : "ISODate(2016-11-29T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c366",
+		"id" : "e7e59e35-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "a5de925b-0155-4328-8a2c-aa266dbe32c3",
+			"name" : "Ronda",
+			"title" : "Manager",
+			"rent" : 0.83
+		},
+		"amount" : 974.12,
+		"on" : "ISODate(2016-11-30T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c367",
+		"id" : "e7e59e36-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "1ab35951-16e7-4f52-b5ad-88300080205d",
+			"name" : "Alysha",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 154.25,
+		"on" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c368",
+		"id" : "e7e59e37-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "1ab35951-16e7-4f52-b5ad-88300080205d",
+			"name" : "Alysha",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 959.89,
+		"on" : "ISODate(2016-11-08T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c369",
+		"id" : "e7e59e38-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "1ab35951-16e7-4f52-b5ad-88300080205d",
+			"name" : "Alysha",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 341.06,
+		"on" : "ISODate(2016-11-09T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c36a",
+		"id" : "e7e59e39-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "1ab35951-16e7-4f52-b5ad-88300080205d",
+			"name" : "Alysha",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 395.68,
+		"on" : "ISODate(2016-11-10T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c36b",
+		"id" : "e7e59e3a-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "1ab35951-16e7-4f52-b5ad-88300080205d",
+			"name" : "Alysha",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 318.13,
+		"on" : "ISODate(2016-11-11T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c36c",
+		"id" : "e7e59e3b-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "1ab35951-16e7-4f52-b5ad-88300080205d",
+			"name" : "Alysha",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 250.35,
+		"on" : "ISODate(2016-11-12T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c36d",
+		"id" : "e7e5c540-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "1ab35951-16e7-4f52-b5ad-88300080205d",
+			"name" : "Alysha",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 335.57,
+		"on" : "ISODate(2016-11-14T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c36e",
+		"id" : "e7e5c541-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "1ab35951-16e7-4f52-b5ad-88300080205d",
+			"name" : "Alysha",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 596.19,
+		"on" : "ISODate(2016-11-15T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c36f",
+		"id" : "e7e5c542-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "1ab35951-16e7-4f52-b5ad-88300080205d",
+			"name" : "Alysha",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 643.22,
+		"on" : "ISODate(2016-11-16T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c370",
+		"id" : "e7e5c543-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "1ab35951-16e7-4f52-b5ad-88300080205d",
+			"name" : "Alysha",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 289.43,
+		"on" : "ISODate(2016-11-17T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c371",
+		"id" : "e7e5c544-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "1ab35951-16e7-4f52-b5ad-88300080205d",
+			"name" : "Alysha",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 514.81,
+		"on" : "ISODate(2016-11-18T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c372",
+		"id" : "e7e5c545-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "1ab35951-16e7-4f52-b5ad-88300080205d",
+			"name" : "Alysha",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 449.5,
+		"on" : "ISODate(2016-11-19T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c373",
+		"id" : "e7e5c546-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "1ab35951-16e7-4f52-b5ad-88300080205d",
+			"name" : "Alysha",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 751.86,
+		"on" : "ISODate(2016-11-21T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c374",
+		"id" : "e7e5c547-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "1ab35951-16e7-4f52-b5ad-88300080205d",
+			"name" : "Alysha",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 176.81,
+		"on" : "ISODate(2016-11-22T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c375",
+		"id" : "e7e5ec50-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "1ab35951-16e7-4f52-b5ad-88300080205d",
+			"name" : "Alysha",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 747.91,
+		"on" : "ISODate(2016-11-23T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c376",
+		"id" : "e7e5ec51-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "1ab35951-16e7-4f52-b5ad-88300080205d",
+			"name" : "Alysha",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 739.5,
+		"on" : "ISODate(2016-11-24T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c377",
+		"id" : "e7e5ec52-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "1ab35951-16e7-4f52-b5ad-88300080205d",
+			"name" : "Alysha",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 418.31,
+		"on" : "ISODate(2016-11-25T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c378",
+		"id" : "e7e5ec53-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "1ab35951-16e7-4f52-b5ad-88300080205d",
+			"name" : "Alysha",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 369.45,
+		"on" : "ISODate(2016-11-26T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c379",
+		"id" : "e7e5ec54-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "1ab35951-16e7-4f52-b5ad-88300080205d",
+			"name" : "Alysha",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 922.93,
+		"on" : "ISODate(2016-11-28T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c37a",
+		"id" : "e7e5ec55-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "1ab35951-16e7-4f52-b5ad-88300080205d",
+			"name" : "Alysha",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 142.51,
+		"on" : "ISODate(2016-11-29T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c37b",
+		"id" : "e7e5ec56-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "1ab35951-16e7-4f52-b5ad-88300080205d",
+			"name" : "Alysha",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 280.99,
+		"on" : "ISODate(2016-11-30T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c37c",
+		"id" : "e7e5ec57-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "9db0f7af-32c3-42e4-87d6-62deaaa6e531",
+			"name" : "Alva",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 980.6,
+		"on" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c37d",
+		"id" : "e7e5ec58-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "9db0f7af-32c3-42e4-87d6-62deaaa6e531",
+			"name" : "Alva",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 855.72,
+		"on" : "ISODate(2016-11-08T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c37e",
+		"id" : "e7e5ec59-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "9db0f7af-32c3-42e4-87d6-62deaaa6e531",
+			"name" : "Alva",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 421.47,
+		"on" : "ISODate(2016-11-09T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c37f",
+		"id" : "e7e5ec5a-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "9db0f7af-32c3-42e4-87d6-62deaaa6e531",
+			"name" : "Alva",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 310.34,
+		"on" : "ISODate(2016-11-10T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c380",
+		"id" : "e7e5ec5b-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "9db0f7af-32c3-42e4-87d6-62deaaa6e531",
+			"name" : "Alva",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 543.55,
+		"on" : "ISODate(2016-11-11T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c381",
+		"id" : "e7e5ec5c-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "9db0f7af-32c3-42e4-87d6-62deaaa6e531",
+			"name" : "Alva",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 1019.04,
+		"on" : "ISODate(2016-11-12T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c382",
+		"id" : "e7e61360-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "9db0f7af-32c3-42e4-87d6-62deaaa6e531",
+			"name" : "Alva",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 414.19,
+		"on" : "ISODate(2016-11-14T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c383",
+		"id" : "e7e61361-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "9db0f7af-32c3-42e4-87d6-62deaaa6e531",
+			"name" : "Alva",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 806.48,
+		"on" : "ISODate(2016-11-15T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c384",
+		"id" : "e7e61362-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "9db0f7af-32c3-42e4-87d6-62deaaa6e531",
+			"name" : "Alva",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 513.18,
+		"on" : "ISODate(2016-11-16T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c385",
+		"id" : "e7e61363-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "9db0f7af-32c3-42e4-87d6-62deaaa6e531",
+			"name" : "Alva",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 671.45,
+		"on" : "ISODate(2016-11-17T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c386",
+		"id" : "e7e61364-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "9db0f7af-32c3-42e4-87d6-62deaaa6e531",
+			"name" : "Alva",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 918.65,
+		"on" : "ISODate(2016-11-18T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c387",
+		"id" : "e7e61365-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "9db0f7af-32c3-42e4-87d6-62deaaa6e531",
+			"name" : "Alva",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 308.14,
+		"on" : "ISODate(2016-11-19T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c388",
+		"id" : "e7e61366-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "9db0f7af-32c3-42e4-87d6-62deaaa6e531",
+			"name" : "Alva",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 755.77,
+		"on" : "ISODate(2016-11-21T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c389",
+		"id" : "e7e61367-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "9db0f7af-32c3-42e4-87d6-62deaaa6e531",
+			"name" : "Alva",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 582.08,
+		"on" : "ISODate(2016-11-22T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c38a",
+		"id" : "e7e61368-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "9db0f7af-32c3-42e4-87d6-62deaaa6e531",
+			"name" : "Alva",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 306.11,
+		"on" : "ISODate(2016-11-23T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c38b",
+		"id" : "e7e61369-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "9db0f7af-32c3-42e4-87d6-62deaaa6e531",
+			"name" : "Alva",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 762.81,
+		"on" : "ISODate(2016-11-24T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c38c",
+		"id" : "e7e6136a-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "9db0f7af-32c3-42e4-87d6-62deaaa6e531",
+			"name" : "Alva",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 427.79,
+		"on" : "ISODate(2016-11-25T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c38d",
+		"id" : "e7e6136b-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "9db0f7af-32c3-42e4-87d6-62deaaa6e531",
+			"name" : "Alva",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 102.58,
+		"on" : "ISODate(2016-11-26T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c38e",
+		"id" : "e7e6136c-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "9db0f7af-32c3-42e4-87d6-62deaaa6e531",
+			"name" : "Alva",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 509.06,
+		"on" : "ISODate(2016-11-28T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c38f",
+		"id" : "e7e6136d-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "9db0f7af-32c3-42e4-87d6-62deaaa6e531",
+			"name" : "Alva",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 837.93,
+		"on" : "ISODate(2016-11-29T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c390",
+		"id" : "e7e63a70-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "9db0f7af-32c3-42e4-87d6-62deaaa6e531",
+			"name" : "Alva",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 939.37,
+		"on" : "ISODate(2016-11-30T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c391",
+		"id" : "e7e63a71-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "46128f4d-e213-4cb6-99d8-3b947e6882c2",
+			"name" : "Justin",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 166.1,
+		"on" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c392",
+		"id" : "e7e63a72-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "46128f4d-e213-4cb6-99d8-3b947e6882c2",
+			"name" : "Justin",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 211.57,
+		"on" : "ISODate(2016-11-08T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c393",
+		"id" : "e7e63a73-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "46128f4d-e213-4cb6-99d8-3b947e6882c2",
+			"name" : "Justin",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 919.96,
+		"on" : "ISODate(2016-11-09T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c394",
+		"id" : "e7e63a74-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "46128f4d-e213-4cb6-99d8-3b947e6882c2",
+			"name" : "Justin",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 974.51,
+		"on" : "ISODate(2016-11-10T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c395",
+		"id" : "e7e63a75-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "46128f4d-e213-4cb6-99d8-3b947e6882c2",
+			"name" : "Justin",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 916.19,
+		"on" : "ISODate(2016-11-11T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c396",
+		"id" : "e7e63a76-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "46128f4d-e213-4cb6-99d8-3b947e6882c2",
+			"name" : "Justin",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 257.71,
+		"on" : "ISODate(2016-11-12T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c397",
+		"id" : "e7e63a77-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "46128f4d-e213-4cb6-99d8-3b947e6882c2",
+			"name" : "Justin",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 394.79,
+		"on" : "ISODate(2016-11-14T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c398",
+		"id" : "e7e63a78-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "46128f4d-e213-4cb6-99d8-3b947e6882c2",
+			"name" : "Justin",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 910.15,
+		"on" : "ISODate(2016-11-15T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c399",
+		"id" : "e7e63a79-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "46128f4d-e213-4cb6-99d8-3b947e6882c2",
+			"name" : "Justin",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 743.03,
+		"on" : "ISODate(2016-11-16T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c39a",
+		"id" : "e7e63a7a-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "46128f4d-e213-4cb6-99d8-3b947e6882c2",
+			"name" : "Justin",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 512.77,
+		"on" : "ISODate(2016-11-17T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c39b",
+		"id" : "e7e63a7b-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "46128f4d-e213-4cb6-99d8-3b947e6882c2",
+			"name" : "Justin",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 673.92,
+		"on" : "ISODate(2016-11-18T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c39c",
+		"id" : "e7e63a7c-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "46128f4d-e213-4cb6-99d8-3b947e6882c2",
+			"name" : "Justin",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 384.73,
+		"on" : "ISODate(2016-11-19T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c39d",
+		"id" : "e7e63a7d-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "46128f4d-e213-4cb6-99d8-3b947e6882c2",
+			"name" : "Justin",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 119.28,
+		"on" : "ISODate(2016-11-21T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c39e",
+		"id" : "e7e63a7e-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "46128f4d-e213-4cb6-99d8-3b947e6882c2",
+			"name" : "Justin",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 347.79,
+		"on" : "ISODate(2016-11-22T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c39f",
+		"id" : "e7e63a7f-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "46128f4d-e213-4cb6-99d8-3b947e6882c2",
+			"name" : "Justin",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 883.31,
+		"on" : "ISODate(2016-11-23T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c3a0",
+		"id" : "e7e63a80-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "46128f4d-e213-4cb6-99d8-3b947e6882c2",
+			"name" : "Justin",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 295.86,
+		"on" : "ISODate(2016-11-24T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c3a1",
+		"id" : "e7e66180-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "46128f4d-e213-4cb6-99d8-3b947e6882c2",
+			"name" : "Justin",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 330.35,
+		"on" : "ISODate(2016-11-25T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c3a2",
+		"id" : "e7e66181-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "46128f4d-e213-4cb6-99d8-3b947e6882c2",
+			"name" : "Justin",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 292.68,
+		"on" : "ISODate(2016-11-26T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c3a3",
+		"id" : "e7e66182-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "46128f4d-e213-4cb6-99d8-3b947e6882c2",
+			"name" : "Justin",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 936.93,
+		"on" : "ISODate(2016-11-28T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c3a4",
+		"id" : "e7e66183-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "46128f4d-e213-4cb6-99d8-3b947e6882c2",
+			"name" : "Justin",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 135.67,
+		"on" : "ISODate(2016-11-29T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}, {
+		"_id" : "582073ca0e74382e4431c3a5",
+		"id" : "e7e66184-a4e5-11e6-9eff-6d5994886f2e",
+		"employee" : {
+			"id" : "46128f4d-e213-4cb6-99d8-3b947e6882c2",
+			"name" : "Justin",
+			"title" : "Barber",
+			"rent" : 0.73
+		},
+		"amount" : 301.9,
+		"on" : "ISODate(2016-11-30T07:30:02-05:00)",
+		"modified" : "ISODate(2016-11-07T07:30:02-05:00)",
+		"modifiedby" : "admin"
+	}
+]

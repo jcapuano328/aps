@@ -1,6 +1,6 @@
 'use strict'
 var program = require('commander');
-var genToken = require('../lib/generate-token');
+var genToken = require('../services/lib/generate-token');
 
 function main(args) {
 	try {

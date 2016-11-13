@@ -34,7 +34,7 @@ module.exports = {
             this.onChange(true, jwtDecode(jwt));
         })
         .catch((err) => {
-            //console.error(err);
+            console.error(err);
             localStorage.removeItem('jwt');
             this.onChange(false);
             throw err;

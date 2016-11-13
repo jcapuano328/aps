@@ -1,5 +1,5 @@
 import React from 'react';
-import { History } from 'react-router'
+import { browserHistory } from 'react-router'
 import { Paper, SelectField, MenuItem, TextField, RadioButtonGroup, RadioButton, Divider, IconButton, FontIcon, Snackbar,
          Toolbar, ToolbarGroup, ToolbarTitle, ToolbarSeparator } from 'material-ui';
 import ConfirmDialog from '../components/confirm';
@@ -7,7 +7,7 @@ import auth from '../services/auth';
 import userService from '../services/users';
 
 let UserProfile = React.createClass({
-    mixins: [ History ],
+    mixins: [ browserHistory ],
 
     getInitialState() {
         return {

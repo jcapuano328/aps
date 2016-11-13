@@ -1,10 +1,10 @@
 import React from 'react';
-import { History } from 'react-router'
+import { browserHistory } from 'react-router'
 import { Paper, TextField, RaisedButton, Snackbar } from 'material-ui';
 import Auth from '../services/auth'
 
 let Login = React.createClass({
-    mixins: [ History ],
+    mixins: [ browserHistory ],
 
     getInitialState() {
         return {

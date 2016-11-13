@@ -18,6 +18,8 @@ https://blog.madewithenvy.com/getting-started-with-webpack-2-ed2b86c68783#.yk4p8
 
 https://webpack.github.io/docs/webpack-dev-server.html
 
+https://github.com/wheresrhys/fetch-mock
+
 
 ## Overview
 

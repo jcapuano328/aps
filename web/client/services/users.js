@@ -2,6 +2,7 @@ import fetch from 'node-fetch';
 import auth from './auth';
 import UrlPattern from 'url-pattern';
 import {BASE_URL, USERS_URL, USER_URL, PASSWORD_RESET_URL} from '../constants/rest';
+import toJson  from './tojson';
 
 module.exports = {
     getAll() {
@@ -14,12 +15,7 @@ module.exports = {
                 'Authorization': 'Bearer ' + token
             }
         })
-        .then(function(response) {
-            if (response.status != 200) {
-                throw {status: response.status, message: response.statusText};
-            }
-            return response.json();
-        });
+        .then(toJson);
     },
     get(userid) {
         let token = auth.getToken();
@@ -33,12 +29,7 @@ module.exports = {
                 'Authorization': 'Bearer ' + token
             }
         })
-        .then(function(response) {
-            if (response.status != 200) {
-                throw {status: response.status, message: response.statusText};
-            }
-            return response.json();
-        });
+        .then(toJson);
     },
     save(user, isnew) {
         let token = auth.getToken();
@@ -54,12 +45,7 @@ module.exports = {
             },
             body: JSON.stringify(user)
         })
-        .then(function(response) {
-            if (response.status != 200 && response.status != 201) {
-                throw {status: response.status, message: response.statusText};
-            }
-            return response.json();
-        });
+        .then(toJson);
     },
     remove(user) {
         let token = auth.getToken();
@@ -73,12 +59,7 @@ module.exports = {
                 'Authorization': 'Bearer ' + token
             }
         })
-        .then(function(response) {
-            if (response.status != 200) {
-                throw {status: response.status, message: response.statusText};
-            }
-            return response.json();
-        });
+        .then(toJson);
     },
     resetPassword(user, currentpwd, newpwd, confirmpwd) {
         let token = auth.getToken();
@@ -97,11 +78,6 @@ module.exports = {
                 confirmpwd: confirmpwd
             })
         })
-        .then(function(response) {
-            if (response.status != 200) {
-                throw {status: response.status, message: response.statusText};
-            }
-            return response.json();
-        });
+        .then(toJson);
     }
 };

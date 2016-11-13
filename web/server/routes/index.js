@@ -10,7 +10,7 @@ module.exports = [
         handler: (req,res,next) => {
             return new Promise((resolve,reject) => {
                 log.info('Render main page');
-                res.sendFile(path.join(__dirname, '..', 'content', 'views', 'index.html'), (err) => {
+                res.sendFile(path.join(__dirname, '..', 'content', 'index.html'), (err) => {
                     if (err) {
                         log.error('Failed to render main page: ' + err);
                         //res.send(500);
