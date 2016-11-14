@@ -6,15 +6,48 @@ import Paper from 'material-ui/Paper';
 import {Table, TableBody, TableFooter, TableHeader, TableHeaderColumn, TableRow, TableRowColumn } from 'material-ui/Table';
 import Snackbar from 'material-ui/Snackbar';
 import {FormattedNumber} from 'react-intl';
-//import NumberInput from 'material-ui-number-input';
-import TextField from 'material-ui/TextField';
+import NumberInput from 'material-ui-number-input';
 import muiTheme from '../services/muitheme';
 import {groupByPerson} from '../services/grosses';
+
+/*
+
+        Header
+        Employee
+            name    mon tue wed thru fri sat gross rent net
+        Footer
+                                             total total total
+*/
+
 
 /*
     Name      Mon     Tue     Wed     Thu     Fri     Sat     Gross   Rent    Net
 
  */
+ let Header = React.createClass({
+     render() {
+         let dt = moment(this.props.start);
+         return (
+            <div style={{width: "100%"}}>
+                <label style={{float: 'left'}}>Name</label>
+                {_.range(6).map((n) => {
+                    dt.add(1,'d');
+                    let dow = dt.format('ddd');
+                    let md = dt.format('MM/DD');
+                    return (
+                        <label key={n} style={{float: 'left'}}>
+                            <p>{dow}</p>
+                            <p>{md}</p>
+                        </label>
+                    );
+                })}
+                <label style={{float: 'left'}}>Gross</label>
+                <label style={{float: 'left'}}>Rent</label>
+                <label style={{float: 'left'}}>Net</label>
+            </div>
+         );
+     }
+});
 
 let DailyGrosses = React.createClass({
     getInitialState() {
@@ -32,30 +65,7 @@ let DailyGrosses = React.createClass({
         return (
             <MuiThemeProvider muiTheme={muiTheme}>
                 <div>
-                    <Table onRowSelection={this.onRowSelect}>
-                        <TableHeader displaySelectAll={false} enableSelectAll={false} adjustForCheckbox={false}>
-                            <TableRow>
-                                <TableHeaderColumn tooltip="Name">Name</TableHeaderColumn>
-                                {_.range(6).map((n) => {
-                                    dt.add(1,'d');
-                                    let dow = dt.format('ddd');
-                                    let md = dt.format('MM/DD');
-                                    return (
-                                        <TableHeaderColumn key={n} tooltip={md}>
-                                            <p>{dow}</p>
-                                            <p>{md}</p>
-                                        </TableHeaderColumn>
-                                    );
-                                })}
-                                <TableHeaderColumn tooltip="Total Gross for the Week">Gross</TableHeaderColumn>
-                                <TableHeaderColumn tooltip="Total Rent for the Week">Rent</TableHeaderColumn>
-                                <TableHeaderColumn tooltip="Net for the Week">Net</TableHeaderColumn>
-                            </TableRow>
-                        </TableHeader>
-                        <TableBody stripedRows={false} displayRowCheckbox={false} deselectOnClickaway={false}>
-                            {data.map(this.renderRow)}
-                        </TableBody>
-                    </Table>
+                    <Header start={this.props.start}/>
                     <Snackbar
                       open={!!this.state.statusMessage}
                       message={this.state.statusMessage}
