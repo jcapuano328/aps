@@ -49,10 +49,10 @@ var config = {
      },
      {
        test: /\.css$/,
-       loaders: ['style', 'css'],
-       include: APP_DIR
+       loader: 'style!css?modules',
+       include: /flexboxgrid/
      },
-      {
+     {
         test : /\.jsx?/,
         include : APP_DIR,
         loader : 'babel'

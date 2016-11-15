@@ -5,7 +5,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import {IntlProvider, addLocaleData} from 'react-intl';
 
 require("font-awesome-webpack");
-require("./css/index.css");
+//require("./css/index.css");
 
 injectTapEventPlugin();
 
