@@ -78,7 +78,9 @@ let getGrosses = (params, body, cb) => {
 	employees.forEach((employee) => {
 		let dt = moment(params.start); dt.startOf('week'); dt.add(1,'d');	// start on monday
 		let count = 0;
-		if (params.unit == 'week') {
+		if (params.unit == 'day') {
+			count = 1;
+		} else if (params.unit == 'week') {
 			count = 6;
 		} else if (params.unit == 'month') {
 			count = (4 * 6) - 4;

@@ -10,11 +10,12 @@ import MenuItem from 'material-ui/MenuItem';
 import IconButton from 'material-ui/IconButton';
 import Snackbar from 'material-ui/Snackbar';
 import DailyGrosses from './grossesDaily';
+import WeeklyGrosses from './grossesWeekly';
 import auth from '../services/auth';
-import grosses from '../services/grosses';
 import muiTheme from '../services/muitheme';
 
 let units = [
+    {value: 'day',description: 'Daily'},
     {value: 'week',description: 'Weekly'},
     {value: 'month',description: 'Monthly'},
     {value: 'year',description: 'Yearly'}
@@ -29,9 +30,9 @@ let Grosses = React.createClass({
 
         return {
             loggedIn: auth.loggedIn(),
-            grosses: [],
             start: dt.toDate(),
             unit: units[0].value,
+            refresh: true,
             statusMessage: '',
             statusMessageDuration: 5000
         };
@@ -69,29 +70,17 @@ let Grosses = React.createClass({
     },
     onPrevPeriod() {
         var dt = this.changeStart(-1);
-        this.setState({start: dt}, () => {
-            this.onRefresh();
-        });
+        this.setState({start: dt});
     },
     onNextPeriod() {
         var dt = this.changeStart(1);
-        this.setState({start: dt}, () => {
-            this.onRefresh();
-        });
+        this.setState({start: dt});
     },
     onRefresh() {
-        console.log('fetch ' + this.state.unit + ' grosses starting ' + this.state.start);
-        grosses.fetch(this.state.start,this.state.unit)
-        .then((data) => {
-            console.log('Retrieved ' + data.length + ' grosses');
-            this.setState({grosses: data});
-        })
-        .catch((err) => {
-            this.setState({statusMessage: err.message || err});
-            console.error(err);
-        });
+        this.setState({refresh: !this.state.refresh});
     },
     render() {
+        console.log('render grosses');
         return (
             <div>
                 <MuiThemeProvider muiTheme={muiTheme}>
@@ -152,6 +141,9 @@ let Grosses = React.createClass({
     formatDate(v) {
         var dt = moment(v);
         dt.startOf(this.state.unit);
+        if (this.state.unit == 'day') {
+            return 'For ' + dt.format('MMM Do, YYYY');
+        }
         if (this.state.unit == 'week') {
             return 'For the week of ' + dt.format('MMM Do, YYYY');
         }
@@ -167,6 +159,9 @@ let Grosses = React.createClass({
         dt.startOf(this.state.unit);
         let unit = 'd';
         switch (this.state.unit) {
+            case 'day':
+            unit = 'd';
+            break;
             case 'week':
             unit = 'w'
             break;
@@ -181,9 +176,14 @@ let Grosses = React.createClass({
         return dt.toDate();
     },
     renderGrosses() {
+        if (this.state.unit == 'day') {
+            return (
+                <DailyGrosses start={this.state.start} unit={this.state.unit} />
+            );
+        }
         if (this.state.unit == 'week') {
             return (
-                <DailyGrosses start={this.state.start} data={this.state.grosses} />
+                <WeeklyGrosses start={this.state.start} unit={this.state.unit} />
             );
         }
         if (this.state.unit == 'month') {
