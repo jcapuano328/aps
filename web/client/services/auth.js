@@ -1,6 +1,5 @@
 import fetch from 'node-fetch';
 import {LOGIN_URL} from '../constants/rest';
-import jwtDecode from 'jwt-decode';
 
 module.exports = {
     login(username, password) {
@@ -30,50 +29,22 @@ module.exports = {
             if (jwt == 'Unauthorized') {
                 throw jwt;
             }
-            localStorage.setItem('jwt', jwt);
-            this.onChange(true, jwtDecode(jwt));
-        })
-        .catch((err) => {
-            console.error(err);
-            localStorage.removeItem('jwt');
-            this.onChange(false);
-            throw err;
+            return jwt;
         });
     },
 
     logout() {
         return new Promise((resolve,reject) => {
-            localStorage.removeItem('jwt');
-            this.onChange(false);
+            // surely must post to the server?
             resolve();
         });
     },
 
-    getToken() {
-        var token = localStorage.getItem('jwt');
-        return token && token != 'Unauthorized' ? token : null;
-    },
-
-    getUser() {
-        let token = this.getToken();
-        if (token) {
-            return jwtDecode(token);
-        }
-        return {};
-    },
-
-    loggedIn() {
-        return !!this.getToken();
-    },
-
-    isInRole(roles) {
+    isInRole(user, roles) {
         roles = typeof roles === 'array' ? roles : [roles];
-        let user = this.getUser();
         return roles.some((role) => {
             let uroles = user.user.roles || [];
             return uroles.indexOf(role) >= 0;
         });
-    },
-
-    onChange() {}
+    }
 };

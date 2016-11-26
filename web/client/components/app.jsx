@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link, browserHistory } from 'react-router';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import { connect } from 'react-redux';
+import { Link } from 'react-router';
 import AppBar from 'material-ui/AppBar';
 import Avatar from 'material-ui/Avatar';
 import IconMenu from 'material-ui/IconMenu';
@@ -10,93 +10,49 @@ import MenuItem from 'material-ui/MenuItem';
 import Divider from 'material-ui/Divider';
 import FontIcon from 'material-ui/FontIcon';
 import FontAwesome from 'react-fontawesome';
-import auth from '../services/auth';
+import Alert from './alert';
 import gravatar from '../services/gravatar';
-import muiTheme from '../services/muitheme';
 
-//let ThemeManager = mui.Styles.ThemeManager;
 let App = React.createClass({
-    mixins: [ browserHistory ],
-
+    contextTypes: {
+        router: React.PropTypes.object.isRequired
+    },
     getInitialState() {
         return {
-            loggedIn: auth.loggedIn(),
-            user: auth.getUser().user
+            open: false
         };
     },
 
-    updateAuth(loggedIn, user) {
-        this.setState({
-            loggedIn: loggedIn,
-            user: user ? user.user : null
-        });
-    },
-
-    componentWillMount() {
-        auth.onChange = this.updateAuth;
-    },
-    componentWillUnmount() {
-        auth.onChange = () => {}
-    },
-    componentDidMount() {
-        let self = this;
-        //* for dev purposes only
-        if (!this.state.loggedIn) {
-            auth.login('jdoe', 'go')
-            .catch(function(err) {
-                let msg = 'Logon Error: ' + (err.message || err);
-                self.setState({statusMessage: msg});
-                console.error(msg, err);
-            });
-        }
-        //*/
-    },
-
-    handleToggle() {
+    onToggleMenu() {
         this.setState({open: !this.state.open});
     },
-
-    handleClose() {
+    onCloseMenu() {
         this.setState({open: false});
     },
-
-    handleMenu(route) {
+    onSelectMenu(route) {
         return (e,idx) => {
-            this.handleClose();
-            this.history.replaceState(null, route);
+            this.onCloseMenu();
+            this.context.router.replace(route);
         }
     },
-
-    handleSignIn() {
-        this.history.replaceState(null, '/login');
+    onSignIn() {
+        this.context.router.replace('/login');
     },
-
-    menuAppBar() {
-        return (
-            <MuiThemeProvider muiTheme={muiTheme}>
-                <AppBar title="APS" onLeftIconButtonTouchTap={this.handleClose} onTitleTouchTap={this.handleClose}/>
-            </MuiThemeProvider>
-        );
-    },
-
     render() {
-        //console.log(this.state.user.username);
-        //console.log(JSON.stringify(this.state.user));
-        var profileuri = this.state.loggedIn ? gravatar(this.state.user) : '';
+        var profileuri = this.props.loggedin ? gravatar(this.props.email) : '';
 
         return (
             <div>
                 <header>
-                  <MuiThemeProvider muiTheme={muiTheme}>
                       <AppBar title='APS'
-                        onTitleTouchTap={this.handleToggle}
-                        onLeftIconButtonTouchTap={this.handleToggle}
+                        onTitleTouchTap={this.onToggleMenu}
+                        onLeftIconButtonTouchTap={this.onToggleMenu}
                         iconElementRight={
-                            this.state.loggedIn ? (
+                            this.props.loggedin ? (
                                 <IconMenu
                                     iconButtonElement={
                                         <IconButton
-                                            tooltip={this.state.user.firstname}
+                                            tooltip={this.props.firstname}
                                             tooltipPosition='bottom-left'
                                         >
                                             <Avatar src={profileuri} />
@@ -105,56 +61,71 @@ let App = React.createClass({
                                     targetOrigin={{horizontal: 'right', vertical: 'top'}}
                                     anchorOrigin={{horizontal: 'right', vertical: 'top'}}
                                 >
-                                    <MenuItem onTouchTap={this.handleMenu('/userprofile')} leftIcon={<FontIcon className="fa fa-user"/>}>Profile</MenuItem>
+                                    <MenuItem onTouchTap={this.onSelectMenu('/userprofile')} leftIcon={<FontIcon className="fa fa-user"/>}>Profile</MenuItem>
                                     <Divider />
-                                    <MenuItem onTouchTap={this.handleMenu('/logout')} leftIcon={<FontIcon className="fa fa-sign-out"/>}>Sign Out</MenuItem>
+                                    <MenuItem onTouchTap={this.onSelectMenu('/logout')} leftIcon={<FontIcon className="fa fa-sign-out"/>}>Sign Out</MenuItem>
                                 </IconMenu>
                             ) : (
                                 <IconButton
                                     tooltip='Sign In'
                                     tooltipPosition='bottom-left'
                                     iconClassName='fa fa-user'
-                                    onTouchTap={this.handleSignIn}
+                                    onTouchTap={this.onSignIn}
                                     />
                             )
                         }>
-                          {!this.state.loggedIn ? (
+                          {!this.props.loggedin ? (
                               <Drawer
                                   docked={false}
                                   open={this.state.open}
                               >
-                                {this.menuAppBar()}
-                                <MenuItem onTouchTap={this.handleMenu('login')}>Sign In</MenuItem>
+                                {this.renderAppBar()}
+                                <MenuItem onTouchTap={this.onSelectMenu('login')}>Sign In</MenuItem>
                               </Drawer>
                           ) : (
                               <Drawer
                                   docked={false}
                                   open={this.state.open}
                               >
-                                  {this.menuAppBar()}
-                                  <MenuItem onTouchTap={this.handleMenu('/')} leftIcon={<FontIcon className="fa fa-home"/>}>Home</MenuItem>
+                                  {this.renderAppBar()}
+                                  <MenuItem onTouchTap={this.onSelectMenu('/')} leftIcon={<FontIcon className="fa fa-home"/>}>Home</MenuItem>
                                   <Divider />
-                                  <MenuItem onTouchTap={this.handleMenu('/reports')} leftIcon={<FontIcon className="fa fa-list"/>}>Reports</MenuItem>
+                                  <MenuItem onTouchTap={this.onSelectMenu('/reports')} leftIcon={<FontIcon className="fa fa-list"/>}>Reports</MenuItem>
                                   <Divider />
-                                  <MenuItem onTouchTap={this.handleMenu('/users')} leftIcon={<FontIcon className="fa fa-users"/>}>Users</MenuItem>
+                                  <MenuItem onTouchTap={this.onSelectMenu('/users')} leftIcon={<FontIcon className="fa fa-users"/>}>Users</MenuItem>
                                   <Divider />
-                                  <MenuItem onTouchTap={this.handleMenu('/userprofile')} leftIcon={<FontIcon className="fa fa-user"/>}>Profile</MenuItem>
-                                  <MenuItem onTouchTap={this.handleMenu('/about')} leftIcon={<FontIcon className="fa fa-question-circle"/>}>About</MenuItem>
+                                  <MenuItem onTouchTap={this.onSelectMenu('/userprofile')} leftIcon={<FontIcon className="fa fa-user"/>}>Profile</MenuItem>
+                                  <MenuItem onTouchTap={this.onSelectMenu('/about')} leftIcon={<FontIcon className="fa fa-question-circle"/>}>About</MenuItem>
                                   <Divider />
-                                  <MenuItem onTouchTap={this.handleMenu('/logout')} leftIcon={<FontIcon className="fa fa-sign-out"/>}>Sign Out</MenuItem>
+                                  <MenuItem onTouchTap={this.onSelectMenu('/logout')} leftIcon={<FontIcon className="fa fa-sign-out"/>}>Sign Out</MenuItem>
                               </Drawer>
                           )}
-
                       </AppBar>
-                  </MuiThemeProvider>
                 </header>
 
                 <section className="content">
                   {this.props.children}
                 </section>
+                <footer>
+                    <Alert />
+                </footer>
             </div>
+        );
+    },
+    renderAppBar() {
+        return (
+            <AppBar title="APS" onLeftIconButtonTouchTap={this.onCloseMenu} onTitleTouchTap={this.onCloseMenu}/>
         );
     }
 });
 
-module.exports = App;
+const mapStateToProps = (state) => ({
+    loggedin: state.user.loggedin,
+    firstname: state.user.firstname,
+    email: state.user.email
+});
+
+
+module.exports = connect(
+  mapStateToProps
+)(App);

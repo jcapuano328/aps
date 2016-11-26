@@ -1,5 +1,4 @@
 import React from 'react';
-import { browserHistory } from 'react-router'
 import { Paper, SelectField, MenuItem, TextField, RadioButtonGroup, RadioButton, Divider, IconButton, FontIcon, Snackbar,
          Toolbar, ToolbarGroup, ToolbarTitle, ToolbarSeparator } from 'material-ui';
 import ConfirmDialog from '../components/confirm';
@@ -7,8 +6,9 @@ import auth from '../services/auth';
 import userService from '../services/users';
 
 let UserProfile = React.createClass({
-    mixins: [ browserHistory ],
-
+    contextTypes: {
+        router: React.PropTypes.object.isRequired
+    },
     getInitialState() {
         return {
             user: null,
@@ -61,16 +61,16 @@ let UserProfile = React.createClass({
 
         userService.save(this.state.user)
         .then(() => {
-            this.history.goBack();
+            this.context.router.goBack();
         })
         .catch((err) => {
             console.error(err);
             this.setState({statusMessage: err.message || err});
-            //this.history.goBack();
+            //this.context.router.goBack();
         });
     },
     onCancel(e) {
-        this.history.goBack();
+        this.context.router.goBack();
     },
 
     render() {

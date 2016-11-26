@@ -1,30 +1,23 @@
 import React from 'react';
-import auth from '../services/auth';
+import { connect } from 'react-redux';
 import Welcome from './welcome';
-import Grosses from './Grosses';
+//import Grosses from './Grosses';
 
 let Home = React.createClass({
-    getInitialState() {
-        return {
-            loggedIn: auth.loggedIn()
-        };
-    },
-
-    /*
-    updateAuth(loggedIn, user) {
-        this.setState({
-            loggedIn: loggedIn,
-            user: user
-        });
-    },
-    */
-
     render() {
-        if (this.state.loggedIn) {
-            return <Grosses />;
+        if (this.props.loggedin) {
+            return <div>Home again, Home again, jiggidy-jig. Good evening {this.props.firstname}!</div>;
+        //    return <Grosses />;
         }
         return <Welcome />;
     }
 });
 
-module.exports = Home;
+const mapStateToProps = (state) => ({
+    loggedin: state.user.loggedin,
+    firstname: state.user.firstname
+});
+
+module.exports = connect(
+  mapStateToProps
+)(Home);

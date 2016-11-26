@@ -1,5 +1,5 @@
 var path = require('path'),
-	fs = require('file'),
+	fs = require('fs'),
 	uuid = require('node-uuid'),
 	mongo = require('mongodb'),
 	moment = require('moment'),
@@ -37,7 +37,7 @@ let handler = (handler) => {
 
             handler(req.params, req.body, (data) => {
 	        	res.writeHead(200, { 'Content-Type': 'application/json' });
-	            res.end(JSON.stringify(data));
+	            res.end(data);//JSON.stringify(data));
 
 		        return next();
 	        });
@@ -55,7 +55,7 @@ let login = (params, body, cb) => {
 			if (err) {
 				reject(err);
 			}
-			resolve(data);
+			resolve(data.toString());
 		});
 	})
 	.then((jwt) => {
@@ -118,7 +118,7 @@ let getGrosses = (params, body, cb) => {
 		}));
 	});
 
-	cb && cb(data);
+	cb && cb(JSON.stringify(data));
 }
 
 

@@ -1,49 +1,37 @@
 import React from 'react';
-import { browserHistory } from 'react-router'
-import { Paper, TextField, RaisedButton, Snackbar } from 'material-ui';
-import Auth from '../services/auth'
+import { connect } from 'react-redux';
+import { Paper, TextField, RaisedButton } from 'material-ui';
+import {login} from '../actions/auth';
 
 let Login = React.createClass({
-    mixins: [ browserHistory ],
-
+    contextTypes: {
+        router: React.PropTypes.object.isRequired
+    },
     getInitialState() {
         return {
             user: '',
-            password: '',
-            loggedIn: Auth.loggedIn(),
-            statusMessage: '',
-            statusMessageDuration: 5000
+            password: ''
         }
     },
-
-    componentWillMount() {
-        if (this.state.loggedIn) {
-            this.history.replaceState(null, '/');
-        }
-    },
-
     componentDidMount() {
-        this.refs.user.focus();
+        if (this.refs.user) {
+            this.refs.user.focus();
+        }
     },
-
-    login(e) {
+    onSubmit(e) {
         let self = this;
         e.preventDefault();
         let user = this.refs.user.getValue();
         let pass = this.refs.pass.getValue();
 
-        Auth.login(user, pass)
-        .then(() => {
-            self.history.replaceState(null, '/');
-        })
-        .catch(function(err) {
-            let msg = 'Logon Error: ' + (err.message || err);
-            self.setState({statusMessage: msg});
-            console.error(msg, err);
-        });
+        this.props.login(user, pass);
     },
-
     render() {
+        if (this.props.loggedin) {
+            this.context.router.replace('/');
+            return (<div/>)
+        }
+
         return (
             <Paper
                 style={{
@@ -53,7 +41,7 @@ let Login = React.createClass({
                 }}
                 zDepth={3}
             >
-                <form onSubmit={this.login}
+                <form onSubmit={this.onSubmit}
                     style={{
                         textAlign: 'center'
                     }}>
@@ -80,18 +68,17 @@ let Login = React.createClass({
                     >
                         <RaisedButton type='submit' label="Sign In" primary={true} />
                     </div>
-                    <Snackbar
-                      open={!!this.state.statusMessage}
-                      message={this.state.statusMessage}
-                      autoHideDuration={this.state.statusMessageDuration}
-                      onRequestClose={() => {
-                          this.setState({statusMessage: ''});
-                      }}
-                    />
                 </form>
             </Paper>
         );
     }
 });
 
-module.exports = Login;
+const mapStateToProps = (state) => ({
+    loggedin: state.user.loggedin
+});
+
+module.exports = connect(
+  mapStateToProps,
+  {login}
+)(Login);
