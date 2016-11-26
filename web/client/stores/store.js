@@ -21,7 +21,9 @@ import rootReducer from '../reducers';
         employees: [], // the list of managed employees
         filter: {   // the filter for grosses
             start: datetime,
-            unit: string
+            unit: string,
+            units: []
+            refresh: bool
         },
         grosses: [] // the list of managed grosses
     }

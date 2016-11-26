@@ -1,38 +1,15 @@
 import React from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import { connect } from 'react-redux';
 import IconButton from 'material-ui/IconButton';
 import {Grid, Row, Col} from 'react-flexbox-grid/lib';
 import {FormattedNumber} from 'react-intl';
 import NumberInput from 'material-ui-number-input';
-import Snackbar from 'material-ui/Snackbar';
-import muiTheme from '../services/muitheme';
-import grosses from '../services/grosses';
-//import {groupByPerson} from '../services/grosses';
 
 /*
     Name      Gross   Rent    Net
 
  */
 let DailyGrosses = React.createClass({
-    getInitialState() {
-        return {
-            grosses: [],
-            statusMessage: '',
-            statusMessageDuration: 5000
-        };
-    },
-    onRefresh() {
-        console.log('fetch ' + this.props.unit + ' grosses starting ' + this.props.start);
-        grosses.fetch(this.props.start,this.props.unit)
-        .then((data) => {
-            console.log('Retrieved ' + data.length + ' grosses');
-            this.setState({grosses: data});
-        })
-        .catch((err) => {
-            this.setState({statusMessage: err.message || err});
-            console.error(err);
-        });
-    },
     onChange() {
 
     },
@@ -40,25 +17,12 @@ let DailyGrosses = React.createClass({
 
     },
     render() {
-        let data = grosses.groupByPerson(this.state.grosses);
         return (
-            <MuiThemeProvider muiTheme={muiTheme}>
-                <div>
-                    <Grid>
-                        {this.renderHeader(data)}
-                        {data.map(this.renderRow)}
-                        {this.renderFooter(data)}
-                    </Grid>
-                    <Snackbar
-                      open={!!this.state.statusMessage}
-                      message={this.state.statusMessage}
-                      autoHideDuration={this.state.statusMessageDuration}
-                      onRequestClose={() => {
-                          this.setState({statusMessage: ''});
-                      }}
-                    />
-                </div>
-            </MuiThemeProvider>
+            <Grid>
+                {this.renderHeader(this.props.grosses)}
+                {this.props.grosses.map(this.renderRow)}
+                {this.renderFooter(this.props.grosses)}
+            </Grid>
         );
     },
     renderHeader(start) {
@@ -112,4 +76,10 @@ let DailyGrosses = React.createClass({
     }
 });
 
-module.exports = DailyGrosses;
+const mapStateToProps = (state) => ({
+    grosses: state.grosses
+});
+
+module.exports = connect(
+  mapStateToProps
+)(DailyGrosses);

@@ -11,9 +11,9 @@ module.exports = (state = defaultToast, action) => {
     case types.TOAST:
         return {
             ...state,
-            active: !!action.message,
-            message: action.message || '',
-            duration: action.duration || state.duration
+            active: !!action.value.message,
+            message: action.value.message || '',
+            duration: action.value.duration || state.duration
         };
 
     default:

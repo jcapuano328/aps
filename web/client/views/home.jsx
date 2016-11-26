@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Welcome from './welcome';
-//import Grosses from './Grosses';
+import Grosses from './Grosses';
 
 let Home = React.createClass({
     render() {
         if (this.props.loggedin) {
-            return <div>Home again, Home again, jiggidy-jig. Good evening {this.props.firstname}!</div>;
-        //    return <Grosses />;
+            //return <div>Home again, Home again, jiggidy-jig. Good evening {this.props.firstname}!</div>;
+            return <Grosses />;
         }
         return <Welcome />;
     }

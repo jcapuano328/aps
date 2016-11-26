@@ -1,12 +1,10 @@
 import fetch from 'node-fetch';
 import UrlPattern from 'url-pattern';
-import auth from './auth';
 import {BASE_URL, GROSSES_SEARCH_URL } from '../constants/rest';
 import toJson  from './tojson';
 
 let GrossesService = {
-    fetch(start, unit) {
-        let token = auth.getToken();
+    fetch(start, unit, token) {        
         let pattern = new UrlPattern(GROSSES_SEARCH_URL);
         let url = BASE_URL + pattern.stringify({start: start.toISOString(), unit: unit});
         return fetch(url, {

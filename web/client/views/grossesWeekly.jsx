@@ -1,14 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import _ from 'lodash';
 import moment from 'moment';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {Table, TableBody, TableFooter, TableHeader, TableHeaderColumn, TableRow, TableRowColumn } from 'material-ui/Table';
 import {Grid, Row, Col} from 'react-flexbox-grid/lib';
-import Snackbar from 'material-ui/Snackbar';
 import {FormattedNumber} from 'react-intl';
 import NumberInput from 'material-ui-number-input';
-import muiTheme from '../services/muitheme';
-import {groupByPerson} from '../services/grosses';
 
 /*
     Name      Mon     Tue     Wed     Thu     Fri     Sat     Gross   Rent    Net
@@ -17,32 +14,17 @@ import {groupByPerson} from '../services/grosses';
 let WeeklyGrosses = React.createClass({
     getInitialState() {
         return {
-            selected: null,
-            statusMessage: '',
-            statusMessageDuration: 5000
+            selected: null
         };
     },
     onRowSelect() {
     },
     render() {
-        let data = groupByPerson(this.props.data);
         return (
-            <MuiThemeProvider muiTheme={muiTheme}>
-                <div>
-                    <Grid>
-                        {this.renderHeader(this.props.start)}
-                        {data.map(this.renderRow)}
-                    </Grid>
-                    <Snackbar
-                      open={!!this.state.statusMessage}
-                      message={this.state.statusMessage}
-                      autoHideDuration={this.state.statusMessageDuration}
-                      onRequestClose={() => {
-                          this.setState({statusMessage: ''});
-                      }}
-                    />
-                </div>
-            </MuiThemeProvider>
+            <Grid>
+                {this.renderHeader(this.props.start)}
+                {this.props.grosses.map(this.renderRow)}
+            </Grid>
         );
     },
     renderHeader(start) {
@@ -76,11 +58,11 @@ let WeeklyGrosses = React.createClass({
         return (
             <Row key={data.id} middle="md" center="md">
                 <Col md={3}>{data.name}</Col>
-                {_.range(6).map((n,i) => {
+                {l.map((n,i) => {
                     return (
-                        <Col key={l[i].id} md={1}>
-                            <FormattedNumber value={l[i].amount} format="USD" />
-                            {/*<NumberInput value={l[i].amount.toFixed(2)} />*/}
+                        <Col key={n.id} md={1}>
+                            <FormattedNumber value={n.amount} format="USD" />
+                            {/*<NumberInput value={n.amount.toFixed(2)} />*/}
                         </Col>
                     );
                 })}
@@ -95,4 +77,12 @@ let WeeklyGrosses = React.createClass({
     }
 });
 
-module.exports = WeeklyGrosses;
+
+const mapStateToProps = (state) => ({
+    start: state.filter.start,
+    grosses: state.grosses
+});
+
+module.exports = connect(
+  mapStateToProps
+)(WeeklyGrosses);

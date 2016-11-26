@@ -4,14 +4,14 @@ import { Snackbar } from 'material-ui'
 import {toast} from '../actions/toast';
 
 let Alert = React.createClass({
-    render() {
+    render() {        
         return (
             <Snackbar
               open={this.props.active}
               message={this.props.message}
               autoHideDuration={this.props.duration}
               onRequestClose={() => {
-                  toast('');
+                  this.props.toast('');
               }}
             />
         );
@@ -26,5 +26,5 @@ const mapStateToProps = (state) => ({
 
 module.exports = connect(
   mapStateToProps,
-  { toast }  
+  { toast }
 )(Alert);
