@@ -5,7 +5,6 @@ import moment from 'moment';
 import {Table, TableBody, TableFooter, TableHeader, TableHeaderColumn, TableRow, TableRowColumn } from 'material-ui/Table';
 import {Grid, Row, Col} from 'react-flexbox-grid/lib';
 import {FormattedNumber} from 'react-intl';
-import NumberInput from 'material-ui-number-input';
 
 /*
     Name      Mon     Tue     Wed     Thu     Fri     Sat     Gross   Rent    Net
@@ -20,34 +19,34 @@ let WeeklyGrosses = React.createClass({
     onRowSelect() {
     },
     render() {
+        let dt = moment(this.props.start);
         return (
-            <Grid>
-                {this.renderHeader(this.props.start)}
-                {this.props.grosses.map(this.renderRow)}
-            </Grid>
-        );
-    },
-    renderHeader(start) {
-        let dt = moment(start);
-        return (
-            <Row middle="md" center="md">
-                <Col md={3}>Name</Col>
-                {_.range(6).map((n) => {
-                    dt.add(1,'d');
-                    let dow = dt.format('ddd');
-                    let md = dt.format('MM/DD');
-                    return (
-                        <Col key={n} md={1}>
-                            <label>{dow}</label>
-                            <br/>
-                            <label>{md}</label>
-                        </Col>
-                    );
-                })}
-                <Col md={1}>Gross</Col>
-                <Col md={1}>Rent</Col>
-                <Col md={1}>Net</Col>
-            </Row>
+            <Grid><Row><Col>
+            <Table onRowSelection={this.onRowSelect}>
+                <TableHeader displaySelectAll={false} enableSelectAll={false} adjustForCheckbox={false}>
+                    <TableRow>
+                        <TableHeaderColumn tooltip="Name">Name</TableHeaderColumn>
+                        {_.range(6).map((n) => {
+                            dt.add(1,'d');
+                            let dow = dt.format('ddd');
+                            let md = dt.format('MM/DD');
+                            return (
+                                <TableHeaderColumn key={n} tooltip={md}>
+                                    <p>{dow}</p>
+                                    <p>{md}</p>
+                                </TableHeaderColumn>
+                            );
+                        })}
+                        <TableHeaderColumn tooltip="Total Gross for the Week">Gross</TableHeaderColumn>
+                        <TableHeaderColumn tooltip="Total Rent for the Week">Rent</TableHeaderColumn>
+                        <TableHeaderColumn tooltip="Net for the Week">Net</TableHeaderColumn>
+                    </TableRow>
+                </TableHeader>
+                <TableBody stripedRows={false} displayRowCheckbox={false} deselectOnClickaway={false}>
+                    {this.props.grosses.map(this.renderRow)}
+                </TableBody>
+            </Table>
+            </Col></Row></Grid>
         );
     },
     renderRow(data, i) {
@@ -56,24 +55,19 @@ let WeeklyGrosses = React.createClass({
         let rent = l.reduce((p,c) => {return p + (c.amount*(1-c.rent));}, 0);
         let net = l.reduce((p,c) => {return p + (c.amount*c.rent);}, 0);
         return (
-            <Row key={data.id} middle="md" center="md">
-                <Col md={3}>{data.name}</Col>
+            <TableRow key={data.id}
+                selected={!!this.state.selected && this.state.selected.id==data.id}>
+                <TableRowColumn>{data.name}</TableRowColumn>
                 {l.map((n,i) => {
                     return (
-                        <Col key={n.id} md={1}>
-                            <FormattedNumber value={n.amount} format="USD" />
-                            {/*<NumberInput value={n.amount.toFixed(2)} />*/}
-                        </Col>
+                        <TableRowColumn key={n.id}><FormattedNumber value={n.amount} format="USD" /></TableRowColumn>
                     );
                 })}
-                <Col md={1}><FormattedNumber value={gross} format="USD" /></Col>
-                <Col md={1}><FormattedNumber value={rent} format="USD" /></Col>
-                <Col md={1}><FormattedNumber value={net} format="USD" /></Col>
-            </Row>
+                <TableRowColumn><FormattedNumber value={gross} format="USD" /></TableRowColumn>
+                <TableRowColumn><FormattedNumber value={rent} format="USD" /></TableRowColumn>
+                <TableRowColumn><FormattedNumber value={net} format="USD" /></TableRowColumn>
+            </TableRow>
         );
-    },
-    renderFooter() {
-        // total gross, rent, net ??
     }
 });
 
