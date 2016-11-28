@@ -1,46 +1,31 @@
 import React from 'react';
-import { Paper, SelectField, MenuItem, TextField, RadioButtonGroup, RadioButton, Divider, IconButton, FontIcon, Snackbar,
-         Toolbar, ToolbarGroup, ToolbarTitle, ToolbarSeparator } from 'material-ui';
+import { connect } from 'react-redux';
+import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
+import Paper from 'material-ui/Paper';
+import SelectField from 'material-ui/SelectField';
+import MenuItem from 'material-ui/MenuItem';
+import TextField from 'material-ui/TextField';
+import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
+import Divider from 'material-ui/Divider';
+import IconButton from 'material-ui/IconButton';
+import FontIcon from 'material-ui/FontIcon';
 import ConfirmDialog from '../components/confirm';
-import auth from '../services/auth';
-import userService from '../services/users';
+import {updateProfile,resetPassword} from '../actions/user';
+import {toast} from '../actions/toast';
 
 let UserProfile = React.createClass({
     contextTypes: {
         router: React.PropTypes.object.isRequired
     },
-    getInitialState() {
+    getInitialState() {        
         return {
-            user: null,
-            first: '',
-            last: '',
-            email: '',
+            first: this.props.first,
+            last: this.props.last,
+            email: this.props.email,
             showReset: false,
-            errors: {},
-            statusMessage: '',
-            statusMessageDuration: 5000
+            errors: {}
         };
     },
-
-    componentWillMount() {
-        let usr = auth.getUser().user;
-        return userService.get(usr.userid)
-        .then((user) => {
-            this.setState({
-                user: user,
-                first: user.firstname,
-                last: user.lastname,
-                email: user.email,
-                preferredAccount: user.preferredAccount,
-                homeView: user.homeView || 'summary'
-            });
-        })
-        .catch((err) => {
-            this.setState({statusMessage: err.message || err});
-            console.error(err);
-        });
-    },
-
     onChangeFirstName(e) {
         this.setState({first: e.target.value});
     },
@@ -54,19 +39,12 @@ let UserProfile = React.createClass({
         this.setState({showReset: true});
     },
     onOk(e) {
-        // call the service to save the data
-        this.state.user.firstname = this.state.first;
-        this.state.user.lastname = this.state.last;
-        this.state.user.email = this.state.email;
-
-        userService.save(this.state.user)
+        this.props.updateProfile({userid: this.props.userid, firstname: this.state.first, lastname: this.state.last, email: this.state.email})
         .then(() => {
             this.context.router.goBack();
         })
         .catch((err) => {
-            console.error(err);
-            this.setState({statusMessage: err.message || err});
-            //this.context.router.goBack();
+            this.props.toast(err.message || err);
         });
     },
     onCancel(e) {
@@ -85,10 +63,10 @@ let UserProfile = React.createClass({
             >
                 <form>
                     <Toolbar>
-                        <ToolbarGroup float="left">
+                        <ToolbarGroup firstChild={true}>
                              <ToolbarTitle text={'Profile'}/>
                         </ToolbarGroup>
-                        <ToolbarGroup float="right">
+                        <ToolbarGroup lastChild={true}>
                             <IconButton
                                 tooltip='Accept'
                                 tooltipPosition='top-left'
@@ -102,8 +80,6 @@ let UserProfile = React.createClass({
                                 onTouchTap={this.onCancel}
                             />
                             <ToolbarSeparator />
-                        </ToolbarGroup>
-                        <ToolbarGroup float="right">
                             <IconButton
                                 tooltip='Reset Password'
                                 tooltipPosition='top-left'
@@ -111,7 +87,6 @@ let UserProfile = React.createClass({
                                 onTouchTap={this.onResetPassword}
                             />
                         </ToolbarGroup>
-
                     </Toolbar>
                     <div style={{textAlign: 'center'}}>
                         <div>
@@ -134,14 +109,6 @@ let UserProfile = React.createClass({
                                 hintText='User Email Address'/>
                         </div>
                     </div>
-                    <Snackbar
-                      open={!!this.state.statusMessage}
-                      message={this.state.statusMessage}
-                      autoHideDuration={this.state.statusMessageDuration}
-                      onRequestClose={() => {
-                          this.setState({statusMessage: ''});
-                      }}
-                    />
                 </form>
                 <ConfirmDialog ref="resetDlg" open={this.state.showReset}
                     title='Reset Password'
@@ -182,17 +149,17 @@ let UserProfile = React.createClass({
                             this.setState({errors: errors});
                             return;
                         }
-                        userService.resetPassword(this.state.user, currentpwd, newpwd, confirmpwd)
+                        this.props.resetPassword({userid: this.props.userid}, currentpwd, newpwd, confirmpwd)
                         .then(() => {
-                            this.setState({statusMessage: 'Password Changed', showReset: false, errors: {}});
+                            this.setState({showReset: false, errors: {}});
+                            this.props.toast('Password Changed');
                         })
                         .catch((err) => {
-                            this.setState({statusMessage: 'Password Change Failed'});//err.message || err});
-                            console.error(err);
+                            this.props.toast('Password Change Failed'/*err.message || err*/)(dispatch);
                         });
                     }}
                     onCancel={() => {
-                        this.setState({showReset: false, errors: {}, statusMessage: ''});
+                        this.setState({showReset: false, errors: {}});
                     }}
                 />
             </Paper>
@@ -200,4 +167,14 @@ let UserProfile = React.createClass({
     }
 });
 
-module.exports = UserProfile;
+const mapStateToProps = (state) => ({
+    userid: state.user.userid,
+    first: state.user.firstname,
+    last: state.user.lastname,
+    email: state.user.email
+});
+
+module.exports = connect(
+  mapStateToProps,
+  {updateProfile,resetPassword,toast}
+)(UserProfile);

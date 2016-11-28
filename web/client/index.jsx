@@ -3,7 +3,7 @@ import {render} from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import Root from './components/root';
 import createStore from './stores/store';
-import {userToken,loginUserSuccess} from './actions/auth';
+import {userToken,loginUserSuccess} from './actions/user';
 import autoLogin from './components/autoLogin';
 
 require("font-awesome-webpack");

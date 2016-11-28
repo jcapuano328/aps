@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 import toast from './toast';
-import auth from './auth';
+import user from './user';
 import filter from './filter';
 import grosses from './grosses';
 
 module.exports = combineReducers({
     toast: toast,
-    user: auth,
+    user: user,
     filter: filter,
     grosses: grosses
 });

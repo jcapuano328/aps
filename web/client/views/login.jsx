@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Paper, TextField, RaisedButton } from 'material-ui';
-import {login} from '../actions/auth';
+import {login} from '../actions/user';
 
 let Login = React.createClass({
     contextTypes: {

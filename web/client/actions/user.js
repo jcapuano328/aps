@@ -1,6 +1,7 @@
 'use strict'
 import types from '../constants/actionTypes';
 import auth from '../services/auth';
+import users from '../services/users';
 import {toast} from './toast';
 const TOKEN = 'aps-token';
 
@@ -39,4 +40,23 @@ export const logout = () => (dispatch) => {
 export const logoutUserSuccess = () => {
     localStorage.removeItem(TOKEN);
     return {type: types.LOGOUT, value: null};
+}
+
+export const updateProfile = (user) => (dispatch,getState) => {
+    const {usr} = getState();
+    return users.get(u.userid, usr.token)
+    .then((u) => {
+        u.firstname = user.firstname;
+        u.lastname = user.lastname;
+        u.email = user.email;
+        return users.update(u, usr.token);
+    })
+    .then(() => {
+        dispatch({type: types.SET_USERPROFILE, value: {firstname: user.firstname, lastname: user.lastname, email: user.email}});
+    });
+}
+
+export const resetPassword = (user, currentpwd, newpwd, confirmpwd) => (dispatch,getState) => {
+    const {usr} = getState();
+    return users.resetPassword(user, currentpwd, newpwd, confirmpwd, usr.token);
 }

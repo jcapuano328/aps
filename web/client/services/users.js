@@ -5,8 +5,7 @@ import {BASE_URL, USERS_URL, USER_URL, PASSWORD_RESET_URL} from '../constants/re
 import toJson  from './tojson';
 
 module.exports = {
-    getAll() {
-        let token = auth.getToken();
+    getAll(token) {
         return fetch(BASE_URL + USERS_URL, {
             method: 'get',
             headers: {
@@ -17,8 +16,7 @@ module.exports = {
         })
         .then(toJson);
     },
-    get(userid) {
-        let token = auth.getToken();
+    get(userid, token) {
         let pattern = new UrlPattern(!!userid ? USER_URL : USERS_URL);
         let url = BASE_URL + pattern.stringify({id: userid});
         return fetch(url, {
@@ -31,13 +29,11 @@ module.exports = {
         })
         .then(toJson);
     },
-    save(user, isnew) {
-        let token = auth.getToken();
+    add(user, token) {
         let pattern = new UrlPattern(isnew ? USERS_URL: USER_URL);
         let url = BASE_URL + pattern.stringify({id: user.userid});
-        let method = isnew ? 'post' : 'put';
         return fetch(url, {
-            method: method,
+            method: 'post',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
@@ -47,8 +43,21 @@ module.exports = {
         })
         .then(toJson);
     },
-    remove(user) {
-        let token = auth.getToken();
+    update(user, token) {
+        let pattern = new UrlPattern(isnew ? USERS_URL: USER_URL);
+        let url = BASE_URL + pattern.stringify({id: user.userid});
+        return fetch(url, {
+            method: 'put',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + token
+            },
+            body: JSON.stringify(user)
+        })
+        .then(toJson);
+    },
+    remove(user, token) {
         let pattern = new UrlPattern(USER_URL);
         let url = BASE_URL + pattern.stringify({id: user.userid});
         return fetch(url, {
@@ -61,8 +70,7 @@ module.exports = {
         })
         .then(toJson);
     },
-    resetPassword(user, currentpwd, newpwd, confirmpwd) {
-        let token = auth.getToken();
+    resetPassword(user, currentpwd, newpwd, confirmpwd, token) {
         let pattern = new UrlPattern(PASSWORD_RESET_URL);
         let url = BASE_URL + pattern.stringify({id: user.userid});
         return fetch(url, {

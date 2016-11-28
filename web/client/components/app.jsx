@@ -32,7 +32,7 @@ let App = React.createClass({
     onSelectMenu(route) {
         return (e,idx) => {
             this.onCloseMenu();
-            this.context.router.replace(route);
+            this.context.router.push(route);
         }
     },
     onSignIn() {
